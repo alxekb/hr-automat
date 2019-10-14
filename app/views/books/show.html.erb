@@ -1,0 +1,18 @@
+<div class="page-header">
+  <%= link_to books_path, class: 'btn btn-default' do %>
+    All Books
+  <% end %>
+  <%= link_to edit_book_path(@book), class: 'btn btn-primary' do %>
+    Edit
+  <% end %>
+  <h1>Show book</h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Title:</dt>
+  <dd><%= @book.title %></dd>
+
+  <dt>User:</dt>
+  <dd><%= @book.user %></dd>
+
+</dl>
