@@ -7,12 +7,12 @@ Rails.application.routes.draw do
   resources :books
 
   namespace :admin do
-    resources :sections
+    resources :books
     resources :chapters
+    resources :sections
+    resources :quizzes
     resources :questions
     resources :tags
-    resources :quizzes
-    resources :books
     resources :users
     resources :announcements
     resources :notifications
