@@ -1,0 +1,7 @@
+<%- @questions.each do |q| %>
+  <div class="form form-group pt-4">
+    <p><%= q.title %></p>
+    <p><%= q.body %></p>
+    <%= text_field :name, class: 'form-control' %>
+  </div>
+<% end %>

@@ -1,8 +1,21 @@
 require 'sidekiq/web'
 
 Rails.application.routes.draw do
+  get 'quizes/index'
+  get 'quizes/show'
+  resources :quizzes
   resources :books
+
   namespace :admin do
+
+    resources :sections
+
+    resources :chapters
+
+    resources :questions
+
+    resources :tags
+    resources :quizzes
     resources :books
     resources :users
     resources :announcements

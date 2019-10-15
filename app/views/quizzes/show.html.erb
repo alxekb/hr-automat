@@ -1,0 +1,18 @@
+<div class="page-header">
+  <%= link_to quizzes_path, class: 'btn btn-default' do %>
+    All Quizzes
+  <% end %>
+  <%= link_to edit_quiz_path(@quiz), class: 'btn btn-primary' do %>
+    Edit
+  <% end %>
+  <h1>Show quiz</h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Name:</dt>
+  <dd><%= @quiz.name %></dd>
+
+  <dt>Description:</dt>
+  <dd><%= @quiz.description %><%= render 'questions' %></dd>
+
+</dl>
